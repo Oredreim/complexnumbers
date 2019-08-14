@@ -35,5 +35,6 @@ public class Complex {
     public double modulo(){
         return Math.sqrt(real*real+img*img);
     }
+    public Complex conjugate(){ return new Complex(real, -img);}
 
 }

@@ -1,21 +1,51 @@
 package mathcplx;
 
 public class ComplexMatrix {
-	private int filas, columnas;
-    private double[][] x;
-    public ComplexMatrix(int filas, int columnas) {
-        this.filas = filas;
-        this.columnas= columnas;
-        x=new double[filas][columnas];
-        for(int i=0; i<filas;i++) {
-        	for (int j=0; j<columnas; j++) {
-        		x[i][j]=0;
-        	}    	
-        }
+    private Complex[][] matrix;
+
+    public ComplexMatrix(int i, int j){
+        matrix = new Complex[i][j];
     }
 
+    public ComplexMatrix(Complex[][] matrix){
+        this.matrix = matrix;
+    }
+    
+    public void put(int i, int j, Complex c){
+        matrix[i][j] = c;
+    }
+    
+    public ComplexMatrix traspose(){
+        Complex[][] resultado = new Complex[matrix[0].length][matrix.length];
+        for(int i = 0; i< matrix.length; i++){
+            for(int j = 0; j< matrix[0].length; j++){
+                resultado[j][i] = matrix[i][j];
+            }
+        }
+        return new ComplexMatrix(resultado);
+    }
+    
+    public ComplexMatrix conjugate(){
+        Complex[][] resultado = new Complex[matrix.length][matrix[0].length];
+        for(int i = 0; i< matrix.length; i++){
+            for(int j = 0; j< matrix[0].length; j++){
+                resultado[i][j] = matrix[i][j].conjugate();
+            }
+        }
+        return new ComplexMatrix(resultado);
+    }
+    public ComplexMatrix adjoint(){
+        return this.traspose().conjugate();
+    }
+    
+    public boolean isHermitian(){
+        if(this.equals(this.adjoint())){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
-
 
 
 
