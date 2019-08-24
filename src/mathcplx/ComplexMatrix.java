@@ -15,6 +15,13 @@ public class ComplexMatrix {
         matrix[i][j] = c;
     }
     
+    public Complex[][] getMatrix() {
+        return matrix;
+    }
+    public void setMatrix(Complex[][] matrix) {
+        this.matrix = matrix;
+    }
+    
     public ComplexMatrix traspose(){
         Complex[][] resultado = new Complex[matrix[0].length][matrix.length];
         for(int i = 0; i< matrix.length; i++){
@@ -45,6 +52,17 @@ public class ComplexMatrix {
             return false;
         }
     }
+    
+    public ComplexMatrix sum(ComplexMatrix c) {
+    	Complex[][] ans=new Complex[matrix.length][matrix[0].length];
+    	for (int i =0; i<matrix.length; i++){
+    		for (int j=0; j<matrix[0].length; j++) {
+    		ans[i][j]=matrix[i][j].sum(c.getMatrix()[i][j]);
+    		}
+    	}
+    	return new ComplexMatrix(ans);
+    }
+    
 }
 
 
