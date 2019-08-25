@@ -8,6 +8,7 @@
 
    El producto de los números complejos se realiza aplicando la propiedad distributiva del producto 
    respecto de la suma y teniendo en cuenta que i2 = −1.
+   
    ![Capture3](https://user-images.githubusercontent.com/53835484/63655193-db2a4a80-c74a-11e9-9ac8-bea6764dddea.PNG)
    
 ## 3. Resta
@@ -19,16 +20,20 @@
 
    Para dividir números complejos en forma binómica se multiplica numerador y denominador por el conjugado del
    denominador y se realizan las operaciones correspondientes.
+   ![Capture4](https://user-images.githubusercontent.com/53835484/63655247-728f9d80-c74b-11e9-8ffa-588417b9deb0.PNG)
    
 ## 5. Módulo
 
    Se llama módulo de un número complejo z = (a,b) a la distancia del origen de coordenadas al afijo de dicho número. 
    Es decir, el módulo de z es , y se representa por |z|.
+   ![Capture5](https://user-images.githubusercontent.com/53835484/63655283-d1551700-c74b-11e9-85fc-2589b24adab5.PNG)
+
    
 ## 6. Conjugado
 
    Se llama conjugado de un número complejo al número complejo que se obtiene por simetría del dado respecto del eje de abscisas.
-   Representando el número complejo a + bi  y haciendo la correspondiente simetría, se tiene que su conjugado es a - bi .
+   Representando el número complejo a + bi  y haciendo la correspondiente simetría, se tiene que su conjugado es a - bi.
+   ![Capture6](https://user-images.githubusercontent.com/53835484/63655313-3c065280-c74c-11e9-86fb-96d66d702148.PNG)
    
 ## 7. Conversión entre representaciones polar y cartesiano
 
@@ -43,6 +48,7 @@
 
    Se llama fase de un número complejo al ángulo que forma el semieje real con el segmento que une el origen de 
    coordenadas y el afijo del número. Se representa por arg(z) o simplemente por a.
+   ![Capture7](https://user-images.githubusercontent.com/53835484/63655342-87206580-c74c-11e9-89c8-7635ae57d043.PNG)
 
 
 
