@@ -2,6 +2,7 @@
 ## 1. Suma
 
    La suma de números complejos se realiza sumando partes reales entre sí y partes imaginarias entre sí.
+   
    ![Capture](https://user-images.githubusercontent.com/53835484/63655139-efba1300-c749-11e9-91d3-3e6adb070363.PNG)
    
 ## 2. Producto
@@ -14,6 +15,7 @@
 ## 3. Resta
 
    La diferencia de números complejos se realiza restando partes reales entre sí y partes imaginarias entre sí.
+   
    ![Capture2](https://user-images.githubusercontent.com/53835484/63655158-445d8e00-c74a-11e9-84c9-0697ffd711e5.PNG)
    
 ## 4. División
@@ -26,6 +28,7 @@
 
    Se llama módulo de un número complejo z = (a,b) a la distancia del origen de coordenadas al afijo de dicho número. 
    Es decir, el módulo de z es , y se representa por |z|.
+   
    ![Capture5](https://user-images.githubusercontent.com/53835484/63655283-d1551700-c74b-11e9-85fc-2589b24adab5.PNG)
 
    
@@ -33,6 +36,7 @@
 
    Se llama conjugado de un número complejo al número complejo que se obtiene por simetría del dado respecto del eje de abscisas.
    Representando el número complejo a + bi  y haciendo la correspondiente simetría, se tiene que su conjugado es a - bi.
+   
    ![Capture6](https://user-images.githubusercontent.com/53835484/63655313-3c065280-c74c-11e9-86fb-96d66d702148.PNG)
    
 ## 7. Conversión entre representaciones polar y cartesiano
@@ -48,6 +52,7 @@
 
    Se llama fase de un número complejo al ángulo que forma el semieje real con el segmento que une el origen de 
    coordenadas y el afijo del número. Se representa por arg(z) o simplemente por a.
+   
    ![Capture7](https://user-images.githubusercontent.com/53835484/63655342-87206580-c74c-11e9-89c8-7635ae57d043.PNG)
 
 
