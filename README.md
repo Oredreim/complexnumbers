@@ -8,10 +8,12 @@
 
    El producto de los números complejos se realiza aplicando la propiedad distributiva del producto 
    respecto de la suma y teniendo en cuenta que i2 = −1.
+   ![Capture3](https://user-images.githubusercontent.com/53835484/63655193-db2a4a80-c74a-11e9-9ac8-bea6764dddea.PNG)
    
 ## 3. Resta
 
    La diferencia de números complejos se realiza restando partes reales entre sí y partes imaginarias entre sí.
+   ![Capture2](https://user-images.githubusercontent.com/53835484/63655158-445d8e00-c74a-11e9-84c9-0697ffd711e5.PNG)
    
 ## 4. División
 
