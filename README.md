@@ -22,6 +22,7 @@
 
    Para dividir números complejos en forma binómica se multiplica numerador y denominador por el conjugado del
    denominador y se realizan las operaciones correspondientes.
+   
    ![Capture4](https://user-images.githubusercontent.com/53835484/63655247-728f9d80-c74b-11e9-8ffa-588417b9deb0.PNG)
    
 ## 5. Módulo
