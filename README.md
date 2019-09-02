@@ -63,10 +63,41 @@
    La suma de matrices sólo se puede efectuar entre matrices con la misma dimensión, es decir, las que tienen el mismo número de filas y    el mismo número de columnas. La matriz resultante tiene las mismas dimensiones, cada uno de cuyos elementos es la suma aritmética de    los elementos en las posiciones correspondientes en las matrices originales.
    
    
+   
 ## 2. resta de matrices:
    Exactamente como se se efectua la suma de matrices podemos efectuar la resta de estas.
+   
 
 ## 3. Multiplicacion de matrices:
+   Iniciamos implementando el producto de matrices multiplicando las filas por las columnas
+   
+   ![Capture8](https://user-images.githubusercontent.com/53835484/64085984-4bad0a80-ccfb-11e9-98b1-2e9634ca6448.PNG)
+   
+   La fila de la matriz A tiene 3 elementos (3 columnas) y la columna de la matriz B también tiene 3 elementos (3 filas).
+   sumamos cada multiplicacion de A[1][j] * B[i][1]:
+   
+   ![Capture9](https://user-images.githubusercontent.com/53835484/64086061-aa728400-ccfb-11e9-8f45-09e689ea5f83.PNG)
+   
+   Luego continuamos con la multiplicacion de A[1][j] * B[j][2].
+   
+   ![Capture10](https://user-images.githubusercontent.com/53835484/64086215-819ebe80-ccfc-11e9-814d-d4d7f1166012.PNG)
+   
+   Hacemos este procedimiento con todas las las filas de A por las Columnas de B para hacer tener nuestra matriz multiplicada.
+   
+ ## 4. Matriz transpuesta:
+   La matriz traspuesta de una matriz  se denota por  y se obtiene cambiando sus filas por columnas (o viceversa).
+   
+   ![Capture11](https://user-images.githubusercontent.com/53835484/64086353-4cdf3700-ccfd-11e9-8550-302e236f6285.PNG)
+   
+ ## 5. Matriz conjugada:
+   Una matriz conjugada es el resultado de la sustitución de los elementos de una matriz {\displaystyle A}A por sus conjugados.
+   Es  decir ir, la parte imaginaria de los elementos de la matriz cambia su signo.
+   
+   ![Capture12](https://user-images.githubusercontent.com/53835484/64086391-929bff80-ccfd-11e9-90c8-8e2f1f666dcc.PNG)
+## 6. Matriz adjunta:
+   
+   
+   
    
 
 
