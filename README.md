@@ -1,4 +1,5 @@
 # Operaciones entre Complejos:
+
 ## 1. Suma
 
    La suma de números complejos se realiza sumando partes reales entre sí y partes imaginarias entre sí.
@@ -56,7 +57,17 @@
    
    ![Capture7](https://user-images.githubusercontent.com/53835484/63655342-87206580-c74c-11e9-89c8-7635ae57d043.PNG)
 
+# operaciones para vectores, matrices:
 
+## 1. Suma de matrices:
+   La suma de matrices sólo se puede efectuar entre matrices con la misma dimensión, es decir, las que tienen el mismo número de filas y    el mismo número de columnas. La matriz resultante tiene las mismas dimensiones, cada uno de cuyos elementos es la suma aritmética de    los elementos en las posiciones correspondientes en las matrices originales.
+   
+   
+## 2. resta de matrices:
+   Exactamente como se se efectua la suma de matrices podemos efectuar la resta de estas.
+
+## 3. Multiplicacion de matrices:
+   
 
 
 
