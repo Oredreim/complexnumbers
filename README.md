@@ -94,7 +94,22 @@
    Es  decir ir, la parte imaginaria de los elementos de la matriz cambia su signo.
    
    ![Capture12](https://user-images.githubusercontent.com/53835484/64086391-929bff80-ccfd-11e9-90c8-8e2f1f666dcc.PNG)
-## 6. Matriz adjunta:
+## 6. Matrices Unitarias:
+   una matriz unitaria es una matriz compleja U, de n por n elementos, que satisface la condición:
+   
+   ![Capture](https://user-images.githubusercontent.com/53835484/64181066-76967c00-ce2b-11e9-8418-ec1e38ab08b0.PNG)
+   
+   ![matriz](https://user-images.githubusercontent.com/53835484/64181149-9a59c200-ce2b-11e9-959d-c18f8290e6e9.png)
+  
+## 7. Matrices Hermintians:
+   es una matriz cuadrada de elementos complejos que tiene la característica de ser igual a su propia traspuesta conjugada. Es decir,
+   el elemento en la i-ésima fila y j-ésima columna es igual al conjugado del elemento en la j-ésima fila e i-ésima columna, para 
+   todos los índices i y j.
+   
+   ![matriz_Hermitiana](https://user-images.githubusercontent.com/53835484/64181372-f4f31e00-ce2b-11e9-8cde-c5854ee2691b.png)
+   
+   
+   
    
    
    
