@@ -111,4 +111,8 @@ public class Complex {
         double y=a.getMagnum()*Math.sin(a.getAngle());
         return new Complex (x,y);      
     }
+    
+    public double norm(){
+        return Math.sqrt(Math.pow(real,2)+Math.pow(ima,2));
+    }
 }

@@ -1,37 +1,40 @@
 package mathcplx;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class ComplexNumberTest {
+class ComplexTest {
 
     Complex c1 = Complex.newComplexNumberAlgebraicForm(3,-4);
     Complex c2 = Complex.newComplexNumberAlgebraicForm(-6,7);
 
     @Test
-    void sum() {
+    public void sum() {
         assertTrue(Complex.newComplexNumberAlgebraicForm(-3,3).equals(c1.sum(c2)));
 
     }
 
-    @Test
-    void rest() {
+	@Test
+    public void rest() {
         assertTrue(Complex.newComplexNumberAlgebraicForm(9,-11).equals(c1.resta(c2)));
     }
 
     @Test
-    void multiply() {
+    public void multiply() {
         assertTrue(Complex.newComplexNumberAlgebraicForm(10,45).equals(c1.produc(c2)));
     }
 
     @Test
-    void divide() {
+    public void divide() {
         assertTrue(Complex.newComplexNumberAlgebraicForm(-46.0/85.0,3.0/85.0).equals(c1.divide(c2)));
     }  
     
     @Test
-    void conjugate() {
+    public void conjugate() {
         assertTrue(Complex.newComplexNumberAlgebraicForm(3,4).equals(c1.conjugate()));
     }
+    
+    private void assertTrue(boolean equals) {
+		// TODO Auto-generated method stub	
+	}
 }
