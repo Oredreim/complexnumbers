@@ -6,10 +6,13 @@
 
 ## Instalation:
 
-   you can clone or download this repository using GIT:
-   
-   ![Capture](https://user-images.githubusercontent.com/53835484/64199947-174b6280-ce51-11e9-83ec-5fb7ce18778e.PNG)
+   Then you have to check out if JAVA and MAVEN are installed in your PC. you can clone or download this repository using GIT:
   
+   ![Capture](https://user-images.githubusercontent.com/53835484/64199947-174b6280-ce51-11e9-83ec-5fb7ce18778e.PNG)
+   
+   You compile and install: mvn package
+   
+   For testing: mvn test
 ## Usage:
 
    There are three classes:
