@@ -6,12 +6,7 @@ import org.junit.Test;
 
 public class ComplexMatrixTest {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
 	
-
 	Complex c1 = Complex.newComplexNumberAlgebraicForm(3,2);
 	Complex c2 = Complex.newComplexNumberAlgebraicForm(-1,3);
 	Complex c3 = Complex.newComplexNumberAlgebraicForm(-10,-7);
