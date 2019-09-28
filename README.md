@@ -96,6 +96,7 @@
 
 ## Prove:
    The configuration that we use is this one:
+   
    ![image](https://user-images.githubusercontent.com/53835484/65822537-b7579a00-e20b-11e9-943e-60431831b81f.png)
    
    As it can be seen, a laser that emits a strong light that goes through a wooden frame that in the middle is the double slit holes.      These holes are very small and ver close to each other.
