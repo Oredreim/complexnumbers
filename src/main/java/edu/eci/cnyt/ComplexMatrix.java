@@ -148,6 +148,33 @@ public class ComplexMatrix {
         }
         return new ComplexMatrix(resultado);
     }
+    public double calculateProbabilityInAPosition(int n){
+        return Math.pow(matrix[0][n].norm()/this.norm(),2);
+    }
+    public Complex varience(ComplexMatrix complexMatrix){
+        if(!isHermitian()){
+            return null;
+        }else{
+            Complex mu = mean(complexMatrix);
+            Complex[][] matrixTemp = new Complex[matrix.length][matrix.length];
+            for(int i = 0; i<matrixTemp.length;i++){
+                for(int j = 0;j<matrixTemp.length;j++){
+                    if(i==j) matrixTemp[i][j] = mu;
+                    else matrixTemp[i][j] = Complex.newComplexNumberAlgebraicForm(0,0);
+                }
+            }
+            return complexMatrix.bra()
+                    .multiply(this.rest(new ComplexMatrix(matrixTemp))
+                            .multiply(this.rest(new ComplexMatrix(matrixTemp))))
+                    .multiply(complexMatrix).getMatrix()[0][0];
+        }
+    }
+    public Complex mean(ComplexMatrix complexMatrix) {
+        return multiply(complexMatrix).bra().multiply(complexMatrix).getMatrix()[0][0];
+    }
+    public ComplexMatrix bra(){
+        return this.adjoint();
+    }
     
 }
 
