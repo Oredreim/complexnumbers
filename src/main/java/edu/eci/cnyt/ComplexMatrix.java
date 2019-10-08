@@ -2,6 +2,7 @@ package edu.eci.cnyt;
 
 public class ComplexMatrix {
     private Complex[][] matrix;
+    double probability;
 
     public ComplexMatrix(int i, int j){
         matrix = new Complex[i][j];
@@ -21,6 +22,7 @@ public class ComplexMatrix {
     public void setMatrix(Complex[][] matrix) {
         this.matrix = matrix;
     }
+    
     
     public ComplexMatrix traspose(){
         Complex[][] resultado = new Complex[matrix[0].length][matrix.length];
@@ -148,9 +150,11 @@ public class ComplexMatrix {
         }
         return new ComplexMatrix(resultado);
     }
+    
     public double calculateProbabilityInAPosition(int n){
         return Math.pow(matrix[0][n].norm()/this.norm(),2);
     }
+    
     public Complex varience(ComplexMatrix complexMatrix){
         if(!isHermitian()){
             return null;
@@ -172,10 +176,31 @@ public class ComplexMatrix {
     public Complex mean(ComplexMatrix complexMatrix) {
         return multiply(complexMatrix).bra().multiply(complexMatrix).getMatrix()[0][0];
     }
+    
     public ComplexMatrix bra(){
         return this.adjoint();
     }
     
+    public Complex innerProduct(ComplexMatrix complexMatrix){
+        
+        Complex temp = Complex.newComplexNumberAlgebraicForm(0,0);
+        for(int i = 0; i< matrix.length; i++){
+            for(int j = 0; j< matrix[0].length; j++){
+                temp = temp.sum(matrix[i][j].produc(complexMatrix.getMatrix()[i][j]));
+            }
+        }
+        return temp;
+    }
+    public Complex amplitudeTransition(ComplexMatrix complexMatrix){
+        return this.bra().innerProduct(complexMatrix);
+    }  
+ 
+    public double probabilities(int slit, int target){
+        return probability;
+    }
+    public void setProbability(double probability){
+        this.probability=probability;
+    }
 }
 
 
