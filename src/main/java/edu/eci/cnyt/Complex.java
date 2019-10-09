@@ -34,6 +34,9 @@ public class Complex {
         this.ima = ima;
     }
     
+    public Complex multiplyEscalar(double num){
+        return new Complex(real*num, ima*num);
+    }
     /**
      * New Complex Number with real and imaginary parts
      * @param realPart Real part
