@@ -6,6 +6,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+     * From classic to quantic simulation test
+     */
+
 public class QuantumBehaviorTest {
 
     @Test

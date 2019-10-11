@@ -1,5 +1,5 @@
 package edu.eci.cnyt;
-
+import java.util.ArrayList;
 public class ComplexMatrix {
     private Complex[][] matrix;
     double probability;
@@ -155,6 +155,10 @@ public class ComplexMatrix {
         return Math.pow(matrix[0][n].norm()/this.norm(),2);
     }
     
+    public Complex amplitudeTransition(ComplexMatrix complexMatrix){
+        return this.bra().innerProduct(complexMatrix);
+    }
+    
     public Complex varience(ComplexMatrix complexMatrix){
         if(!isHermitian()){
             return null;
@@ -191,10 +195,64 @@ public class ComplexMatrix {
         }
         return temp;
     }
-    public Complex amplitudeTransition(ComplexMatrix complexMatrix){
-        return this.bra().innerProduct(complexMatrix);
-    }  
- 
+    
+    /**
+     * verifys the complex matrices if their are hermitian and the vector if its the right size
+     * @param complexMatrices
+     * @param vector
+     * @return
+     * @throws ComplexException
+     */
+    private static boolean verifySizesOrbit(ArrayList<ComplexMatrix> complexMatrices, ComplexMatrix vector){
+        boolean bol = true;
+        int size = complexMatrices.get(0).getMatrix().length;
+        for(ComplexMatrix complexMatrix:complexMatrices){
+            if(!complexMatrix.isUnitary() || complexMatrix.getMatrix().length!=size) bol = false;
+        }
+        if(vector.getMatrix().length!=size) {
+            bol =false;
+        }
+        return bol;
+    }
+    
+    public static ComplexMatrix finalOrbit(ArrayList<ComplexMatrix> complexMatrices, ComplexMatrix vector){
+        if(!verifySizesOrbit(complexMatrices,vector)){
+            return null;
+        }else{
+            ComplexMatrix temp = vector;
+            for(ComplexMatrix complexMatrix:complexMatrices){
+                temp = complexMatrix.multiply(temp);
+            }
+            return temp;
+        }
+    }
+    
+    public boolean equals(ComplexMatrix complexMatrix){
+        if(matrix.length != complexMatrix.getMatrix().length || matrix[0].length != complexMatrix.getMatrix()[0].length){
+            return false;
+        }
+        boolean temp = true;
+        for(int i = 0; i< matrix.length && temp; i++){
+            for(int j = 0; j< matrix[0].length && temp; j++){
+                if(!matrix[i][j].equals(complexMatrix.getMatrix()[i][j])) temp = false;
+            }
+        }
+        return temp;
+
+    }
+    
+    @Override
+    public String toString(){
+        String temp = "";
+        for(int i = 0; i< matrix.length; i++){
+            for(int j = 0; j< matrix[0].length; j++){
+                temp += "Row: " + i + " Column: " + j + " Number: " + matrix[i][j];
+            }
+            temp+="\n";
+        }
+        return temp;
+    }
+    
     public double probabilities(int slit, int target){
         return probability;
     }

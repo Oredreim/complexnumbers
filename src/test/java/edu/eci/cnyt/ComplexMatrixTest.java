@@ -1,12 +1,8 @@
 package edu.eci.cnyt;
-
+import java.util.ArrayList;
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 public class ComplexMatrixTest {
-
-	
 	Complex c1 = Complex.newComplexNumberAlgebraicForm(3,2);
 	Complex c2 = Complex.newComplexNumberAlgebraicForm(-1,3);
 	Complex c3 = Complex.newComplexNumberAlgebraicForm(-10,-7);
@@ -119,7 +115,41 @@ public class ComplexMatrixTest {
 	        ComplexMatrix tm1= new ComplexMatrix(new Complex[][]{{t1,t2},{t3,t4}});
 	        assertTrue(tm1.equals(cm1.multiplyEscalar(Complex.newComplexNumberAlgebraicForm(2,-3))));
 	    }
-	    
+            @Test
+            void innerProduct(){
+            ComplexMatrix tm1 = new ComplexMatrix(new Complex[][]{{c1,c2,c3,c4}});
+            ComplexMatrix tm2 = new ComplexMatrix(new Complex[][]{{c5,c6,c7,c8}});
+            assertTrue(Complex.newComplexNumberAlgebraicForm(-12,32).equals(tm1.innerProduct(tm2)));
+            }
+            
+            @Test
+            void varience(){
+            assertTrue(Complex.newComplexNumberAlgebraicForm(0.25,0).equals( new ComplexMatrix(new Complex[][]{{
+                Complex.newComplexNumberAlgebraicForm(1,0),
+                Complex.newComplexNumberAlgebraicForm(0,-1)
+            },{
+            Complex.newComplexNumberAlgebraicForm(0,1),
+                Complex.newComplexNumberAlgebraicForm(2,0)
+            }}).varience(new ComplexMatrix(new Complex[][]{{
+            Complex.newComplexNumberAlgebraicForm(Math.sqrt(2)/2.0,0)
+            },{
+            Complex.newComplexNumberAlgebraicForm(0,Math.sqrt(2)/2.0)
+            }}))));
+            }
+            
+            @Test
+            void orbit(){
+            Complex t1 = Complex.newComplexNumberAlgebraicForm(1,1);
+            Complex t2 = Complex.newComplexNumberAlgebraicForm(1,-1);
+            ComplexMatrix complexMatrix = new ComplexMatrix(new Complex[][]{{t1,t2},{t2,t1}}).multiplyEscalar(Complex.newComplexNumberAlgebraicForm(1.0/2.0,0));
+            ComplexMatrix vector = new ComplexMatrix(new Complex[][]{{Complex.newComplexNumberAlgebraicForm(1,0), Complex.newComplexNumberAlgebraicForm(0,0)}}).adjoint();
+            ArrayList<ComplexMatrix> complexMatrices = new ArrayList<ComplexMatrix>();
+            complexMatrices.add(complexMatrix);
+            complexMatrices.add(complexMatrix);
+            assertTrue(ComplexMatrix.finalOrbit(complexMatrices,vector).equals(new ComplexMatrix(new Complex[][]{{Complex.newComplexNumberAlgebraicForm(0,0)},{Complex.newComplexNumberAlgebraicForm(1,0)}})));
+            }
+            
+            
 	    private void assertTrue(boolean equals) {
 			// TODO Auto-generated method stub
 	    }
