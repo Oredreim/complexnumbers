@@ -24,7 +24,7 @@
 
 ## ComplexNumerbs:
 
-   Methods (Complex Numbers):
+   ### Methods (Complex Numbers):
 
    Phase:
    Calculate the Phase of a complex number.
@@ -57,7 +57,8 @@
    Calculate the cartesian representation fo a complex number.
    
   
-   Methods (Complex Matrix Functions):
+   ### Methods (Complex Matrix Functions):
+   
    Transpose:
    Calculate the transpose of a matrix.
    
