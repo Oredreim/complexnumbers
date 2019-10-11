@@ -22,7 +22,8 @@
    ComplexMatrix: it consist in the operations betwin two matrix, such as, sum, rest, multiply, tensor, etc. All of this operation can 
    be done to a complex matrix (two of them).
 
-##ComplexNumerbs:
+## ComplexNumerbs:
+
    # Methods (Complex Numbers):
 
    Phase:
