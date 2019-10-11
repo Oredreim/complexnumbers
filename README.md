@@ -93,10 +93,11 @@
    
    Tensor:
    Calculate the operation Tensor of a complex matrix.
-##QuantumState:
-   #Find
+## QuantumState:
+   ### Methods:
    
-## Double Slit Experiment;
+   
+## Double Slit Experiment:
    For the sake of basic concepts, it is going to be explained the simplest way possible. So, in physics, a light is pretty much a wave,    so when this laser beam of light passes through the two slits, it becomes two expanded waves. But waves have this behavior that when    they are overlapped, in some sections (depending of the position of both) they get cancelled. And because of that, it makes this        effect like there is a lot of slits that don´t exist. This has a more complicated mathemathical explanation, that to make it short,      the resulting probability of two complex numbers can be cero, something that doesn´t happen with only real numbers. This can be seen    in a test in this ver library!
 
 ## Prove:
