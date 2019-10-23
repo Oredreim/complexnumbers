@@ -99,7 +99,7 @@
    innerProduct, variance, calculateprobabilitYinaPosition, amplitudeTransition, variance, mean, bra, verifySizeProduct,        finalOrbit, equals.
 
 ## Some Test:
-   ![alt text](https://raw.githubusercontent.com/Oredreim/complexnumbers/tree/master/fotos/Capture.png
+   ![](images/Capture.png)
    
    
 ## Double Slit Experiment:
