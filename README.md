@@ -99,7 +99,9 @@
    innerProduct, variance, calculateprobabilitYinaPosition, amplitudeTransition, variance, mean, bra, verifySizeProduct,        finalOrbit, equals.
 
 ## Some Test:
-   ![](images/Capture.png)
+   ![image](https://user-images.githubusercontent.com/53835484/67410755-311c4280-f582-11e9-82be-41bffe620b76.png)
+   
+   ![image](https://user-images.githubusercontent.com/53835484/67410829-4a24f380-f582-11e9-8ec1-cedef75c7665.png)
    
    
 ## Double Slit Experiment:
