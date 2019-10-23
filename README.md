@@ -97,6 +97,9 @@
    ### Methods:
    
    innerProduct, variance, calculateprobabilitYinaPosition, amplitudeTransition, variance, mean, bra, verifySizeProduct,        finalOrbit, equals.
+
+## Some Test:
+   https://raw.githubusercontent.com/Oredreim/complexnumbers/tree/master/fotos
    
    
 ## Double Slit Experiment:
