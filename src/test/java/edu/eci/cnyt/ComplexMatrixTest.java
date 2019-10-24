@@ -136,19 +136,7 @@ public class ComplexMatrixTest {
             Complex.newComplexNumberAlgebraicForm(0,Math.sqrt(2)/2.0)
             }}))));
             }
-            
-            @Test
-            void orbit(){
-            Complex t1 = Complex.newComplexNumberAlgebraicForm(1,1);
-            Complex t2 = Complex.newComplexNumberAlgebraicForm(1,-1);
-            ComplexMatrix complexMatrix = new ComplexMatrix(new Complex[][]{{t1,t2},{t2,t1}}).multiplyEscalar(Complex.newComplexNumberAlgebraicForm(1.0/2.0,0));
-            ComplexMatrix vector = new ComplexMatrix(new Complex[][]{{Complex.newComplexNumberAlgebraicForm(1,0), Complex.newComplexNumberAlgebraicForm(0,0)}}).adjoint();
-            ArrayList<ComplexMatrix> complexMatrices = new ArrayList<ComplexMatrix>();
-            complexMatrices.add(complexMatrix);
-            complexMatrices.add(complexMatrix);
-            assertTrue(ComplexMatrix.finalOrbit(complexMatrices,vector).equals(new ComplexMatrix(new Complex[][]{{Complex.newComplexNumberAlgebraicForm(0,0)},{Complex.newComplexNumberAlgebraicForm(1,0)}})));
-            }
-            
+
             
 	    private void assertTrue(boolean equals) {
 			// TODO Auto-generated method stub

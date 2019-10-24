@@ -114,28 +114,36 @@ public class ComplexMatrix {
     }
     
     public boolean isUnitary(){
-        Complex[][] tempMatrix = new Complex[matrix.length][matrix.length];
-        for(int i = 0; i < matrix.length; i++){
-            for(int j = 0; j < matrix.length; j++){
-                if(i==j){
-                    tempMatrix[i][j] = Complex.newComplexNumberAlgebraicForm(1,0);
-                }else{
-                    tempMatrix[i][j] = Complex.newComplexNumberAlgebraicForm(0,0);
-                }
-            }
-        }
-        ComplexMatrix iden = new ComplexMatrix(tempMatrix);
-        ComplexMatrix first = this.multiply(this.adjoint());
-        ComplexMatrix second = this.adjoint().multiply(this);
-        boolean bol = true;
+        public boolean isUnitary()
 
-        for (int i = 0; i<matrix.length;i++){
-            for(int j = 0; j<matrix.length;j++){
-                if(!first.getMatrix()[i][j].equals(iden.getMatrix()[i][j]) ||
-                !second.getMatrix()[i][j].equals(iden.getMatrix()[i][j])) bol = false;
+            boolean bol=true;
+            if(!Complex.produc(this,this.adjoint()).equals(Complex.produc(this.adjoint(),this))){
+                bol=false;
             }
+            ComplexMatrix nthis= Complex.produc(this,this.adjoint());
+            if(bol){
+                for(int i=0;i<m && bol;i++){
+                    for(int j=0;j<n && bol;j++){
+                        if(i!=j){
+                            if(!nthis.get(i,j).equals(new Complex(0,0))){
+                                bol=false;
+                                //System.out.println("false2");
+                            }
+                        }
+                        else if(i==j){
+                            if(!nthis.get(i,j).equals(new Complex(1,0))){
+                                bol=false;
+                                //System.out.println("false3");
+                                System.out.println(nthis.get(i,j));
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            return bol;
         }
-        return bol;
     }
     public ComplexMatrix tensor(ComplexMatrix c){
         Complex[][] resultado = new Complex[matrix.length* c.getMatrix().length][matrix[0].length* c.getMatrix()[0].length];
@@ -195,37 +203,7 @@ public class ComplexMatrix {
         }
         return temp;
     }
-    
-    /**
-     * verifys the complex matrices if their are hermitian and the vector if its the right size
-     * @param complexMatrices
-     * @param vector
-     * @return
-     * @throws ComplexException
-     */
-    private static boolean verifySizesOrbit(ArrayList<ComplexMatrix> complexMatrices, ComplexMatrix vector){
-        boolean bol = true;
-        int size = complexMatrices.get(0).getMatrix().length;
-        for(ComplexMatrix complexMatrix:complexMatrices){
-            if(!complexMatrix.isUnitary() || complexMatrix.getMatrix().length!=size) bol = false;
-        }
-        if(vector.getMatrix().length!=size) {
-            bol =false;
-        }
-        return bol;
-    }
-    
-    public static ComplexMatrix finalOrbit(ArrayList<ComplexMatrix> complexMatrices, ComplexMatrix vector){
-        if(!verifySizesOrbit(complexMatrices,vector)){
-            return null;
-        }else{
-            ComplexMatrix temp = vector;
-            for(ComplexMatrix complexMatrix:complexMatrices){
-                temp = complexMatrix.multiply(temp);
-            }
-            return temp;
-        }
-    }
+
     
     public boolean equals(ComplexMatrix complexMatrix){
         if(matrix.length != complexMatrix.getMatrix().length || matrix[0].length != complexMatrix.getMatrix()[0].length){
